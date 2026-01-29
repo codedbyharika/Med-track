@@ -1,5 +1,5 @@
 # MediTrack
-
+![Landing Page UI](Ui_sample_images/landing_page1.png)
 MediTrack is a web-based healthcare assistance platform designed for patients to manage their medications, appointments, and receive automated reminders. It features a simple rule-based chatbot for wellness support.
 
 ## Features
