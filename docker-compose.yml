@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_DEBUG=1
+      - FLASK_APP=app
+      - DATABASE_URL=sqlite:///meditrack.db
+    env_file:
+      - .env.example
