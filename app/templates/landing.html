@@ -2,44 +2,91 @@
 
 {% block content %}
 <div class="container py-5">
-    <div class="row min-vh-75 align-items-center">
+    <!-- Hero Section -->
+    <div class="row min-vh-75 align-items-center mb-5">
         <div class="col-lg-6 mb-5 mb-lg-0">
             <h1 class="display-3 fw-bold mb-4"
                 style="background: linear-gradient(135deg, #2d3748 0%, #667eea 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-                Your Health, <br>Simplified.
+                Your Health, <br>Reimagined.
             </h1>
             <p class="lead text-secondary mb-5">
-                MediTrack helps you manage prescriptions, track appointments, and stay on top of your health goals with
-                our intelligent assistant.
+                Experience the future of personal health management. MediTrack combines smart medication tracking, easy
+                appointment scheduling, and AI-powered support in one secure platform.
             </p>
             <div class="d-flex gap-3">
-                <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg px-4 shadow-lg">Get Started</a>
-                <a href="{{ url_for('auth.login') }}" class="btn btn-outline-primary btn-lg px-4">Login</a>
+                <a href="{{ url_for('auth.register') }}" class="btn btn-primary btn-lg px-4 shadow-lg rounded-pill">Get
+                    Started Free</a>
+                <a href="{{ url_for('auth.login') }}" class="btn btn-outline-primary btn-lg px-4 rounded-pill">Sign
+                    In</a>
             </div>
 
             <div class="mt-5 d-flex gap-4 text-secondary">
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-shield-check fs-4 me-2 text-primary"></i>
-                    <span>Secure</span>
+                    <div class="bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                        <i class="bi bi-shield-check fs-5 text-primary"></i>
+                    </div>
+                    <span>HIPAA Ready</span>
                 </div>
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-bell fs-4 me-2 text-primary"></i>
-                    <span>Smart Reminders</span>
-                </div>
-                <div class="d-flex align-items-center">
-                    <i class="bi bi-heart fs-4 me-2 text-primary"></i>
-                    <span>Wellness</span>
+                    <div class="bg-primary bg-opacity-10 p-2 rounded-circle me-2">
+                        <i class="bi bi-bell fs-5 text-primary"></i>
+                    </div>
+                    <span>Smart Alerts</span>
                 </div>
             </div>
         </div>
         <div class="col-lg-6 text-center">
             <div class="position-relative">
                 <div class="position-absolute top-50 start-50 translate-middle"
-                    style="width: 400px; height: 400px; background: radial-gradient(circle, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.05) 70%); border-radius: 50%; z-index: -1;">
+                    style="width: 450px; height: 450px; background: radial-gradient(circle, rgba(102,126,234,0.1) 0%, rgba(118,75,162,0.05) 70%); border-radius: 50%; z-index: -1;">
                 </div>
-                <img src="https://cdni.iconscout.com/illustration/premium/thumb/online-doctor-consultation-illustration-download-in-svg-png-gif-file-formats--medical-health-care-call-center-communication-pack-healthcare-illustrations-2941916.png"
-                    alt="Healthcare Illustration" class="img-fluid drop-shadow"
-                    style="filter: drop-shadow(0 20px 30px rgba(102,126,234,0.15)); max-height: 500px;">
+                <img src="{{ url_for('static', filename='img/landing.png') }}" alt="Healthcare Illustration"
+                    class="img-fluid"
+                    style="filter: drop-shadow(0 20px 40px rgba(102,126,234,0.2)); max-height: 500px; transform: scale(1.02);">
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row g-4 py-5">
+        <div class="col-12 text-center mb-5">
+            <h2 class="fw-bold section-title">Why Choose MediTrack?</h2>
+            <p class="text-muted">Everything you need to manage your well-being</p>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-hover p-4 text-center bg-white" style="border-radius: 20px;">
+                <div class="mx-auto mb-3 bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 70px; height: 70px;">
+                    <i class="bi bi-capsule fs-2 text-primary"></i>
+                </div>
+                <h5 class="fw-bold">Medication Tracker</h5>
+                <p class="text-muted small">Never miss a dose again. Get timely reminders and track your adherence
+                    history effortlessly.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-hover p-4 text-center bg-white" style="border-radius: 20px;">
+                <div class="mx-auto mb-3 bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 70px; height: 70px;">
+                    <i class="bi bi-calendar-check fs-2 text-success"></i>
+                </div>
+                <h5 class="fw-bold">Easy Scheduling</h5>
+                <p class="text-muted small">Book appointments instantly. Our smart system prevents conflicts and keeps
+                    you organized.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-hover p-4 text-center bg-white" style="border-radius: 20px;">
+                <div class="mx-auto mb-3 bg-info bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                    style="width: 70px; height: 70px;">
+                    <i class="bi bi-chat-heart fs-2 text-info"></i>
+                </div>
+                <h5 class="fw-bold">24/7 AI Support</h5>
+                <p class="text-muted small">Get instant answers and emotional support from our advanced AI assistant
+                    anytime, anywhere.</p>
             </div>
         </div>
     </div>
